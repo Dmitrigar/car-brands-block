@@ -7,7 +7,35 @@
     <div class="CarBrandsBlock__content">
       <h2 class="CarBrandsBlock__title">Только проверенные автомобили</h2>
       <Logos class="CarBrandsBlock__logos" />
+
+      <div class="CarBrandsBlock__brands">
+        <div class="CarBrandsBlock__brand">
+          <span class="CarBrandsBlock__brand-name">Kia</span>
+          <span class="CarBrandsBlock__brand-count">5</span>
+        </div>
+
+        <div class="CarBrandsBlock__brand">
+          <span class="CarBrandsBlock__brand-name">Kia</span>
+          <span class="CarBrandsBlock__brand-count">5</span>
+        </div>
+
+        <div class="CarBrandsBlock__brand">
+          <span class="CarBrandsBlock__brand-name">Kia</span>
+          <span class="CarBrandsBlock__brand-count">5</span>
+        </div>
+
+        <div class="CarBrandsBlock__brand">
+          <span class="CarBrandsBlock__brand-name">Kia</span>
+          <span class="CarBrandsBlock__brand-count">5</span>
+        </div>
+
+        <div class="CarBrandsBlock__brand">
+          <span class="CarBrandsBlock__brand-name">Kia</span>
+          <span class="CarBrandsBlock__brand-count">5</span>
+        </div>
+      </div>
     </div>
+    
     <OrangeOval class="CarBrandsBlock__OrangeOval" />
     <BlueOval class="CarBrandsBlock__BlueOval" />
   </div>
