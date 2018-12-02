@@ -4,7 +4,7 @@
   <FordLogo class="CarBrandsBlock__logo" />
   <VolkswagenLogo class="CarBrandsBlock__logo" />
   <HyundaiLogo class="CarBrandsBlock__logo" />
-  <NissanLogo class="CarBrandsBlock__logo" />
+  <NissanLogo class="CarBrandsBlock__logo--circled" />
   <KiaLogo class="CarBrandsBlock__logo" />
   <SkodaLogo class="CarBrandsBlock__logo" />
   <LadaLogo class="CarBrandsBlock__logo" />
@@ -14,9 +14,13 @@
 
 <style lang="scss">
 .CarBrandsBlock__logo {
-  margin: 0 25px;
   display: inline;
-  vertical-align: middle;
+  margin: 0 12px;
+  border-radius: 35px;
+}
+.CarBrandsBlock__logo--circled {
+  @extend .CarBrandsBlock__logo;
+  background: #ffffff;
 }
 </style>
 
