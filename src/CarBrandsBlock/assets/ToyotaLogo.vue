@@ -1,5 +1,5 @@
 <template>
-<svg width="43" height="28" viewBox="0 0 43 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="70" height="70" viewBox="-13 -21 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
   <mask id="ToyotaLogo-mask" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="43" height="28">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.0372925H42.9606V28H0V0.0372925Z" fill="white" />
   </mask>

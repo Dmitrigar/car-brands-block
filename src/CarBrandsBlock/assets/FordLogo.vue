@@ -1,5 +1,5 @@
 <template>
-<svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="70" height="70" viewBox="-11 -26 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
   <mask id="FordLogo-mask" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="35" height="16">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.431137H34.7723V15.3687H0V0.431137Z" fill="white" />
   </mask>

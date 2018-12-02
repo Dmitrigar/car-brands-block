@@ -1,5 +1,5 @@
 <template>
-<svg width="51" height="25" viewBox="0 0 51 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="70" height="70" viewBox="-10 -22 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
   <mask id="KiaLogo-mask" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="51" height="25">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.000335693 0.624809H50.7329V24.881H0.000335693V0.624809Z" fill="white" />
   </mask>

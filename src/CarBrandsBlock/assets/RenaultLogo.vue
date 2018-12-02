@@ -1,5 +1,5 @@
 <template>
-<svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="70" height="70" viewBox="-22 -19 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
   <mask id="RenaultLogo-mask" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="30">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V30H0V0Z" fill="white" />
   </mask>

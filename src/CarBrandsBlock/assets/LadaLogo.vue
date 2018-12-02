@@ -1,5 +1,5 @@
 <template>
-<svg width="69" height="28" viewBox="0 0 69 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="70" height="70" viewBox="0 -21 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
   <mask id="LadaLogo-mask" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="69" height="28">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H69V28H0V0Z" fill="white" />
   </mask>

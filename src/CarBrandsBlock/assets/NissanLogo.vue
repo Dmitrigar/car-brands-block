@@ -1,5 +1,5 @@
 <template>
-  <svg width="44" height="37" viewBox="0 0 44 37" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg width="70" height="70" viewBox="-13 -16 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <rect width="44" height="37" fill="url(#NissanLogo-pattern)"/>
   <defs>
   <pattern id="NissanLogo-pattern" patternContentUnits="objectBoundingBox" width="1" height="1">
