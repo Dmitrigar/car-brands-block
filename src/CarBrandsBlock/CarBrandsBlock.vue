@@ -24,6 +24,30 @@
 </div>
 </template>
 
+<script>
+import Logos from "./Logos.vue";
+import WhiteCircle from "./assets/WhiteCircle.vue";
+import OrangeOval from "./assets/OrangeOval.vue";
+import BlueOval from "./assets/BlueOval.vue";
+
+import testData from "./test-data";
+
+export default {
+  name: "CarBrandsBlock",
+  components: {
+    Logos,
+    WhiteCircle,
+    OrangeOval,
+    BlueOval
+  },
+  data() {
+    return {
+      brands: testData
+    };
+  }
+};
+</script>
+
 <style lang="scss">
 @import "./vars.scss";
 
@@ -129,27 +153,3 @@
   text-align: right;
 }
 </style>
-
-<script>
-import Logos from "./Logos.vue";
-import WhiteCircle from "./assets/WhiteCircle.vue";
-import OrangeOval from "./assets/OrangeOval.vue";
-import BlueOval from "./assets/BlueOval.vue";
-
-import testData from "./test-data";
-
-export default {
-  name: "CarBrandsBlock",
-  components: {
-    Logos,
-    WhiteCircle,
-    OrangeOval,
-    BlueOval
-  },
-  data() {
-    return {
-      brands: testData
-    };
-  }
-};
-</script>
