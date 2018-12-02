@@ -34,8 +34,10 @@
           <span class="CarBrandsBlock__brand-count">5</span>
         </div>
       </div>
+
+      <button class="CarBrandsBlock__button">Перейти в каталог</button>
     </div>
-    
+
     <OrangeOval class="CarBrandsBlock__OrangeOval" />
     <BlueOval class="CarBrandsBlock__BlueOval" />
   </div>
