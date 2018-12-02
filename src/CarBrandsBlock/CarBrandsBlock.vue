@@ -7,10 +7,9 @@
     <div class="CarBrandsBlock__content">
       <h2 class="CarBrandsBlock__title">Только проверенные автомобили</h2>
       <Logos class="CarBrandsBlock__logos" />
-
-      <OrangeOval class="CarBrandsBlock__OrangeOval" />
-      <BlueOval class="CarBrandsBlock__BlueOval" />
     </div>
+    <OrangeOval class="CarBrandsBlock__OrangeOval" />
+    <BlueOval class="CarBrandsBlock__BlueOval" />
   </div>
 </div>
 </template>
@@ -24,6 +23,8 @@
   height: $totalHeight;
   overflow: hidden;
   max-width: $blockMaxWidth;
+  font-family: Ubuntu;
+  font-size: 16px;
 }
 
 .CarBrandsBlock__stripe {
@@ -54,8 +55,6 @@
   height: 58px;
   text-align: center;
   font-family: Ubuntu Condensed;
-  font-style: normal;
-  font-weight: normal;
   line-height: 58px;
   font-size: 48px;
   letter-spacing: -0.617143px;
@@ -65,6 +64,38 @@
 .CarBrandsBlock__logos {
   text-align: center;
   padding: 45px 0;
+}
+
+.CarBrandsBlock__brands {
+  margin-bottom: 80px;
+}
+
+.CarBrandsBlock__brand {
+  float: left;
+  width: $contentWidth / 5;
+}
+
+.CarBrandsBlock__brand-name {
+  margin: 7px;
+}
+.CarBrandsBlock__brand-count {
+  margin: 7px;
+  font-weight: bold;
+  font-size: 13px;
+  mix-blend-mode: normal;
+  opacity: 0.32;
+}
+
+.CarBrandsBlock__button {
+  float: right;
+  width: 224px;
+  height: 56px;
+
+  font-size: inherit;
+  background: #2d3c4e;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
 }
 
 .CarBrandsBlock__WhiteCircle {
@@ -78,13 +109,13 @@
 .CarBrandsBlock__OrangeOval {
   position: absolute;
   top: 0;
-  right: $contentWidth - 53px;
+  right: 1320px;
 }
 
 .CarBrandsBlock__BlueOval {
   position: absolute;
   top: 451 - $headStripeHeight;
-  left: $contentWidth + 36px;
+  left: 474px;
   text-align: right;
 }
 </style>
@@ -95,6 +126,8 @@ import WhiteCircle from "./assets/WhiteCircle.vue";
 import OrangeOval from "./assets/OrangeOval.vue";
 import BlueOval from "./assets/BlueOval.vue";
 
+import testData from "./test-data";
+
 export default {
   name: "CarBrandsBlock",
   components: {
@@ -102,6 +135,11 @@ export default {
     WhiteCircle,
     OrangeOval,
     BlueOval
+  },
+  data() {
+    return {
+      brands: testData
+    };
   }
 };
 </script>
