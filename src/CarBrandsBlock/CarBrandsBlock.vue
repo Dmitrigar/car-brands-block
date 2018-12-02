@@ -9,29 +9,9 @@
       <Logos class="CarBrandsBlock__logos" />
 
       <div class="CarBrandsBlock__brands">
-        <div class="CarBrandsBlock__brand">
-          <span class="CarBrandsBlock__brand-name">Kia</span>
-          <span class="CarBrandsBlock__brand-count">5</span>
-        </div>
-
-        <div class="CarBrandsBlock__brand">
-          <span class="CarBrandsBlock__brand-name">Kia</span>
-          <span class="CarBrandsBlock__brand-count">5</span>
-        </div>
-
-        <div class="CarBrandsBlock__brand">
-          <span class="CarBrandsBlock__brand-name">Kia</span>
-          <span class="CarBrandsBlock__brand-count">5</span>
-        </div>
-
-        <div class="CarBrandsBlock__brand">
-          <span class="CarBrandsBlock__brand-name">Kia</span>
-          <span class="CarBrandsBlock__brand-count">5</span>
-        </div>
-
-        <div class="CarBrandsBlock__brand">
-          <span class="CarBrandsBlock__brand-name">Kia</span>
-          <span class="CarBrandsBlock__brand-count">5</span>
+        <div class="CarBrandsBlock__brand" v-for="x in brands">
+          <span class="CarBrandsBlock__brand-name">{{x.brand}}</span>
+          <span class="CarBrandsBlock__brand-count">{{x.car_count}}</span>
         </div>
       </div>
 
