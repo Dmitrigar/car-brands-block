@@ -1,7 +1,6 @@
 <template>
 <div class="CarBrandsBlock">
   <div class="CarBrandsBlock__stripe"></div>
-  <WhiteCircle class="CarBrandsBlock__WhiteCircle" />
 
   <div class="CarBrandsBlock__centring">
     <div class="CarBrandsBlock__content">
@@ -9,7 +8,7 @@
       <Logos class="CarBrandsBlock__logos" />
 
       <div class="CarBrandsBlock__brands">
-        <div class="CarBrandsBlock__brand" v-for="x in brands">
+        <div class="CarBrandsBlock__brand" v-for="(x,i) in brands" :key="i">
           <span class="CarBrandsBlock__brand-name">{{x.brand}}</span>
           <span class="CarBrandsBlock__brand-count">{{x.car_count}}</span>
         </div>
@@ -27,7 +26,6 @@
 <script>
 import axios from "axios";
 import Logos from "./Logos.vue";
-import WhiteCircle from "./assets/WhiteCircle.vue";
 import OrangeOval from "./assets/OrangeOval.vue";
 import BlueOval from "./assets/BlueOval.vue";
 
@@ -37,7 +35,6 @@ export default {
   name: "CarBrandsBlock",
   components: {
     Logos,
-    WhiteCircle,
     OrangeOval,
     BlueOval
   },
@@ -136,14 +133,6 @@ export default {
   border: none;
   border-radius: 3px;
   color: #ffffff;
-}
-
-.CarBrandsBlock__WhiteCircle {
-  position: relative;
-  display: block;
-  top: 252px;
-  right: 21px;
-  margin: auto;
 }
 
 .CarBrandsBlock__OrangeOval {
