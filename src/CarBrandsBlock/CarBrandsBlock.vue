@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import Logos from "./Logos.vue";
 import WhiteCircle from "./assets/WhiteCircle.vue";
 import OrangeOval from "./assets/OrangeOval.vue";
@@ -44,6 +45,11 @@ export default {
     return {
       brands: testData
     };
+  },
+  mounted() {
+    axios
+      .get("http://138.201.184.34:5000/api/resource/cars/brands")
+      .then(response => (this.brands = response.data));
   }
 };
 </script>
