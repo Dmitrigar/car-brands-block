@@ -97,7 +97,7 @@
 }
 
 .CarBrandsBlock__brands {
-  margin-bottom: 80px;
+  margin: 0 0 80px;
 }
 
 .CarBrandsBlock__brand {
@@ -106,10 +106,10 @@
 }
 
 .CarBrandsBlock__brand-name {
-  margin: 7px;
+  margin-left: 35px;
 }
 .CarBrandsBlock__brand-count {
-  margin: 7px;
+  margin-left: 13px;
   font-weight: bold;
   font-size: 13px;
   mix-blend-mode: normal;
