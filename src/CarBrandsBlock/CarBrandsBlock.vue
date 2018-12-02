@@ -138,13 +138,13 @@ export default {
 .CarBrandsBlock__OrangeOval {
   position: absolute;
   top: 0;
-  right: 1320px;
+  right: 1290px;
 }
 
 .CarBrandsBlock__BlueOval {
   position: absolute;
   top: 451 - $headStripeHeight;
-  left: 474px;
+  left: 476px;
   text-align: right;
 }
 </style>
