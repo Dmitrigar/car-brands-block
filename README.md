@@ -1,5 +1,7 @@
 # car-brands-block
 
+Example Vue component prototype.
+
 ## Project setup
 ```
 yarn install
