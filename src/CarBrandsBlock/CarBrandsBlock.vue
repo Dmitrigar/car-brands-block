@@ -8,9 +8,12 @@
       <Logos class="CarBrandsBlock__logos" />
 
       <div v-if="Array.isArray(brands)" class="CarBrandsBlock__brands">
-        <div class="CarBrandsBlock__brand" v-for="(x,i) in brands" :key="i">
-          <span class="CarBrandsBlock__brand-name">{{x.brand}}</span>
-          <span class="CarBrandsBlock__brand-count">{{x.car_count}}</span>
+        <div class="CarBrandsBlock__brand" v-for="x in brands" :key="x.id">
+          <router-link :to="{ name: 'brand', params: {id:x.id, data: x } }">
+
+            <span class="CarBrandsBlock__brand-name">{{x.brand}}</span>
+            <span class="CarBrandsBlock__brand-count">{{x.car_count}}</span>
+          </router-link>
         </div>
       </div>
 
@@ -111,7 +114,7 @@ export default {
       .then(data => {
         if (
           !Array.isArray(data) ||
-          data.some(x => !x.brand || isNaN(x.car_count))
+          data.some(x => !x.brand || isNaN(x.car_count) || isNaN(x.id))
         )
           throw "Failed to get brands.";
 
@@ -135,14 +138,19 @@ export default {
   src: url("./assets/Ubuntu-M.ttf");
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .CarBrandsBlock {
   background: $mainBackground;
   font-family: Ubuntu;
+  color: $mainColor;
 }
 
 .CarBrandsBlock__title {
   font-family: Ubuntu Condensed;
-  color: $mainColor;
 }
 
 .CarBrandsBlock__brand-count {
