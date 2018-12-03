@@ -142,7 +142,7 @@ export default {
 }
 
 .CarBrandsBlock__price-tooltip {
-  color: #2d3c4eda;
+  color: #2d3c4ecc;
 }
 
 .CarBrandsBlock__button {
@@ -176,12 +176,9 @@ export default {
 
   .CarBrandsBlock__title {
     margin: 0;
-    text-align: center;
-    font-family: Ubuntu Condensed;
     line-height: 33px;
     font-size: 30px;
     letter-spacing: -0.4px;
-    color: $mainColor;
   }
 
   .CarBrandsBlock__logos {
@@ -205,11 +202,6 @@ export default {
     margin-left: 13px;
     font-weight: bold;
     font-size: 13px;
-    opacity: 0.32;
-  }
-
-  .CarBrandsBlock__brands-error {
-    color: red;
   }
 
   .CarBrandsBlock__price {
@@ -217,20 +209,11 @@ export default {
     padding: 30px 0 55px;
   }
 
-  .CarBrandsBlock__price-tooltip {
-    color: #2d3c4eda;
-  }
-
   .CarBrandsBlock__button {
     float: right;
     width: 100%;
     height: 56px;
-
     font-size: inherit;
-    background: #2d3c4e;
-    border: none;
-    border-radius: 3px;
-    color: #ffffff;
   }
 
   .CarBrandsBlock__OrangeOval {
@@ -246,21 +229,19 @@ export default {
 @media (min-width: $desktopMinWidth) {
   .CarBrandsBlock {
     position: relative;
-    background: $mainBackground;
     height: $totalHeight;
     overflow: hidden;
     max-width: $blockMaxWidth;
-    font-family: Ubuntu;
     font-size: 16px;
   }
 
   .CarBrandsBlock__stripe {
+    background: linear-gradient(29.18deg, #01aeca 5.56%, #67c6a3 95.8%);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: $headStripeHeight;
-    background: linear-gradient(29.18deg, #01aeca 5.56%, #67c6a3 95.8%);
   }
 
   .CarBrandsBlock__centring {
@@ -279,12 +260,9 @@ export default {
 
   .CarBrandsBlock__title {
     margin: 0;
-    text-align: center;
-    font-family: Ubuntu Condensed;
     line-height: 58px;
     font-size: 48px;
     letter-spacing: -0.6px;
-    color: $mainColor;
   }
 
   .CarBrandsBlock__logos {
@@ -309,11 +287,6 @@ export default {
     margin-left: 13px;
     font-weight: bold;
     font-size: 13px;
-    opacity: 0.32;
-  }
-
-  .CarBrandsBlock__brands-error {
-    color: red;
   }
 
   .CarBrandsBlock__price {
@@ -322,20 +295,11 @@ export default {
     margin: 15px 0 0;
   }
 
-  .CarBrandsBlock__price-tooltip {
-    color: #2d3c4eda;
-  }
-
   .CarBrandsBlock__button {
     float: right;
     width: 224px;
     height: 56px;
-
     font-size: inherit;
-    background: #2d3c4e;
-    border: none;
-    border-radius: 3px;
-    color: #ffffff;
   }
 
   .CarBrandsBlock__OrangeOval {
