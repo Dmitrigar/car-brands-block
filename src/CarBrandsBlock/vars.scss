@@ -1,7 +1,8 @@
+$mobileMinWidth: 400px;
 $mobileMaxWidth: 850px;
-$desktopMinWidth: $mobileMaxWidth + 1;
 
-$blockMaxWidth: 1440px;
+$desktopMinWidth: $mobileMaxWidth + 1;
+$desktopMaxWidth: 1440px;
 
 $mainBackground: #f6f6f6;
 $mainColor: #2d3c4e;

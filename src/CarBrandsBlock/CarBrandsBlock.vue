@@ -128,7 +128,6 @@ export default {
 }
 
 .CarBrandsBlock__title {
-  text-align: center;
   font-family: Ubuntu Condensed;
   color: $mainColor;
 }
@@ -158,8 +157,8 @@ export default {
     position: relative;
     height: 743px;
     overflow: hidden;
-    max-width: $blockMaxWidth;
-    font-size: 16px;
+    min-width: $mobileMinWidth;
+    font-size: 15px;
   }
 
   .CarBrandsBlock__stripe {
@@ -170,7 +169,7 @@ export default {
   }
 
   .CarBrandsBlock__content {
-    padding: 30px 60px;
+    padding: 30px 50px 80px;
     max-height: $contentHeight;
   }
 
@@ -178,6 +177,7 @@ export default {
     margin: 0;
     line-height: 33px;
     font-size: 30px;
+    font-weight: 100;
     letter-spacing: -0.4px;
   }
 
@@ -186,7 +186,7 @@ export default {
   }
 
   .CarBrandsBlock__brands {
-    margin: 25px 0 80px;
+    margin: 15px 0;
   }
 
   .CarBrandsBlock__brand {
@@ -196,7 +196,7 @@ export default {
   }
 
   .CarBrandsBlock__brand-name {
-    margin-left: 8px;
+    margin-left: 4px;
   }
   .CarBrandsBlock__brand-count {
     margin-left: 13px;
@@ -212,7 +212,7 @@ export default {
   .CarBrandsBlock__button {
     float: right;
     width: 100%;
-    height: 56px;
+    height: 50px;
     font-size: inherit;
   }
 
@@ -231,7 +231,7 @@ export default {
     position: relative;
     height: $totalHeight;
     overflow: hidden;
-    max-width: $blockMaxWidth;
+    max-width: $desktopMaxWidth;
     font-size: 16px;
   }
 
@@ -259,6 +259,7 @@ export default {
   }
 
   .CarBrandsBlock__title {
+    text-align: center;
     margin: 0;
     line-height: 58px;
     font-size: 48px;
