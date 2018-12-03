@@ -123,71 +123,17 @@ export default {
 @import "./vars.scss";
 
 .CarBrandsBlock {
-  position: relative;
   background: $mainBackground;
-  height: $totalHeight;
-  overflow: hidden;
-  max-width: $blockMaxWidth;
   font-family: Ubuntu;
-  font-size: 16px;
-}
-
-.CarBrandsBlock__stripe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: $headStripeHeight;
-  background: linear-gradient(29.18deg, #01aeca 5.56%, #67c6a3 95.8%);
-}
-
-.CarBrandsBlock__centring {
-  position: absolute;
-  left: 50%;
-  top: $headStripeHeight;
-}
-
-.CarBrandsBlock__content {
-  position: relative;
-  left: -50%;
-  width: $contentWidth;
-  padding-top: 100px;
-  max-height: $contentHeight;
 }
 
 .CarBrandsBlock__title {
-  margin: 0;
-  height: 58px;
   text-align: center;
   font-family: Ubuntu Condensed;
-  line-height: 58px;
-  font-size: 48px;
-  letter-spacing: -0.617143px;
   color: $mainColor;
 }
 
-.CarBrandsBlock__logos {
-  text-align: center;
-  padding: 45px 0;
-}
-
-.CarBrandsBlock__brands {
-  margin: 0 0 80px;
-}
-
-.CarBrandsBlock__brand {
-  float: left;
-  width: $contentWidth / 5;
-}
-
-.CarBrandsBlock__brand-name {
-  margin-left: 35px;
-}
 .CarBrandsBlock__brand-count {
-  margin-left: 13px;
-  font-weight: bold;
-  font-size: 13px;
-  mix-blend-mode: normal;
   opacity: 0.32;
 }
 
@@ -195,39 +141,214 @@ export default {
   color: red;
 }
 
-.CarBrandsBlock__price {
-  width: 572px;
-  float: left;
-  margin: 15px 0 0;
-}
-
 .CarBrandsBlock__price-tooltip {
   color: #2d3c4eda;
-  font-size: smaller;
 }
 
 .CarBrandsBlock__button {
-  float: right;
-  width: 224px;
-  height: 56px;
-
-  font-size: inherit;
   background: #2d3c4e;
   border: none;
   border-radius: 3px;
   color: #ffffff;
 }
 
-.CarBrandsBlock__OrangeOval {
-  position: absolute;
-  top: 0;
-  right: 1290px;
+// Mobile
+@media (max-width: $mobileMaxWidth) {
+  .CarBrandsBlock {
+    position: relative;
+    height: 743px;
+    overflow: hidden;
+    max-width: $blockMaxWidth;
+    font-size: 16px;
+  }
+
+  .CarBrandsBlock__stripe {
+    display: none;
+  }
+
+  .CarBrandsBlock__centring {
+  }
+
+  .CarBrandsBlock__content {
+    padding: 30px 60px;
+    max-height: $contentHeight;
+  }
+
+  .CarBrandsBlock__title {
+    margin: 0;
+    text-align: center;
+    font-family: Ubuntu Condensed;
+    line-height: 33px;
+    font-size: 30px;
+    letter-spacing: -0.4px;
+    color: $mainColor;
+  }
+
+  .CarBrandsBlock__logos {
+    display: none;
+  }
+
+  .CarBrandsBlock__brands {
+    margin: 25px 0 80px;
+  }
+
+  .CarBrandsBlock__brand {
+    float: left;
+    margin: 15px 0 0;
+    width: 50%;
+  }
+
+  .CarBrandsBlock__brand-name {
+    margin-left: 8px;
+  }
+  .CarBrandsBlock__brand-count {
+    margin-left: 13px;
+    font-weight: bold;
+    font-size: 13px;
+    opacity: 0.32;
+  }
+
+  .CarBrandsBlock__brands-error {
+    color: red;
+  }
+
+  .CarBrandsBlock__price {
+    clear: both;
+    padding: 30px 0 55px;
+  }
+
+  .CarBrandsBlock__price-tooltip {
+    color: #2d3c4eda;
+  }
+
+  .CarBrandsBlock__button {
+    float: right;
+    width: 100%;
+    height: 56px;
+
+    font-size: inherit;
+    background: #2d3c4e;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+  }
+
+  .CarBrandsBlock__OrangeOval {
+    display: none;
+  }
+
+  .CarBrandsBlock__BlueOval {
+    display: none;
+  }
 }
 
-.CarBrandsBlock__BlueOval {
-  position: absolute;
-  top: 451 - $headStripeHeight;
-  left: 476px;
-  text-align: right;
+// Desktop
+@media (min-width: $desktopMinWidth) {
+  .CarBrandsBlock {
+    position: relative;
+    background: $mainBackground;
+    height: $totalHeight;
+    overflow: hidden;
+    max-width: $blockMaxWidth;
+    font-family: Ubuntu;
+    font-size: 16px;
+  }
+
+  .CarBrandsBlock__stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $headStripeHeight;
+    background: linear-gradient(29.18deg, #01aeca 5.56%, #67c6a3 95.8%);
+  }
+
+  .CarBrandsBlock__centring {
+    position: absolute;
+    left: 50%;
+    top: $headStripeHeight;
+  }
+
+  .CarBrandsBlock__content {
+    position: relative;
+    left: -50%;
+    width: $contentWidth;
+    padding-top: 100px;
+    max-height: $contentHeight;
+  }
+
+  .CarBrandsBlock__title {
+    margin: 0;
+    text-align: center;
+    font-family: Ubuntu Condensed;
+    line-height: 58px;
+    font-size: 48px;
+    letter-spacing: -0.6px;
+    color: $mainColor;
+  }
+
+  .CarBrandsBlock__logos {
+    text-align: center;
+    padding: 45px 0;
+  }
+
+  .CarBrandsBlock__brands {
+    margin: 0 0 80px;
+  }
+
+  .CarBrandsBlock__brand {
+    float: left;
+    margin: 10px 0 0;
+    width: $contentWidth / 5;
+  }
+
+  .CarBrandsBlock__brand-name {
+    margin-left: 35px;
+  }
+  .CarBrandsBlock__brand-count {
+    margin-left: 13px;
+    font-weight: bold;
+    font-size: 13px;
+    opacity: 0.32;
+  }
+
+  .CarBrandsBlock__brands-error {
+    color: red;
+  }
+
+  .CarBrandsBlock__price {
+    width: 572px;
+    float: left;
+    margin: 15px 0 0;
+  }
+
+  .CarBrandsBlock__price-tooltip {
+    color: #2d3c4eda;
+  }
+
+  .CarBrandsBlock__button {
+    float: right;
+    width: 224px;
+    height: 56px;
+
+    font-size: inherit;
+    background: #2d3c4e;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+  }
+
+  .CarBrandsBlock__OrangeOval {
+    position: absolute;
+    top: 0;
+    right: 1290px;
+  }
+
+  .CarBrandsBlock__BlueOval {
+    position: absolute;
+    top: 451 - $headStripeHeight;
+    left: 476px;
+    text-align: right;
+  }
 }
 </style>
