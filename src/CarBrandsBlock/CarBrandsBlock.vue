@@ -7,11 +7,16 @@
       <h2 class="CarBrandsBlock__title">Только проверенные автомобили</h2>
       <Logos class="CarBrandsBlock__logos" />
 
-      <div class="CarBrandsBlock__brands">
+      <div v-if="Array.isArray(brands)" class="CarBrandsBlock__brands">
         <div class="CarBrandsBlock__brand" v-for="(x,i) in brands" :key="i">
           <span class="CarBrandsBlock__brand-name">{{x.brand}}</span>
           <span class="CarBrandsBlock__brand-count">{{x.car_count}}</span>
         </div>
+      </div>
+
+      <div v-else class="CarBrandsBlock__brands-error">
+        <h4>ОШИБКА ЗАГРУЗКИ ДАННЫХ:</h4>
+        <span>{{brands}}</span>
       </div>
 
       <button class="CarBrandsBlock__button">Перейти в каталог</button>
@@ -29,8 +34,6 @@ import Logos from "./Logos.vue";
 import OrangeOval from "./assets/OrangeOval.vue";
 import BlueOval from "./assets/BlueOval.vue";
 
-import testData from "./test-data";
-
 export default {
   name: "CarBrandsBlock",
   components: {
@@ -40,13 +43,23 @@ export default {
   },
   data() {
     return {
-      brands: testData
+      brands: []
     };
   },
   mounted() {
     axios
       .get("http://138.201.184.34:5000/api/resource/cars/brands")
-      .then(response => (this.brands = response.data));
+      .then(response => response.data)
+      .then(data => {
+        if (
+          !Array.isArray(data) ||
+          data.some(x => !x.brand || isNaN(x.car_count))
+        )
+          throw "Failed to get brands.";
+
+        this.brands = data;
+      })
+      .catch(error => (this.brands = error));
   }
 };
 </script>
@@ -121,6 +134,10 @@ export default {
   font-size: 13px;
   mix-blend-mode: normal;
   opacity: 0.32;
+}
+
+.CarBrandsBlock__brands-error {
+  color: red;
 }
 
 .CarBrandsBlock__button {
