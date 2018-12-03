@@ -1,6 +1,6 @@
 <template>
 <main id="app">
-  <CarBrandsBlock class="app_CarBrandsBlock" />
+  <CarBrandsBlock class="app_CarBrandsBlock" src="http://138.201.184.34:5000/api/resource/cars/brands" />
 </main>
 </template>
 

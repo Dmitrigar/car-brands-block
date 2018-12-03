@@ -56,6 +56,9 @@ export default {
     BlueOval,
     VueSlider
   },
+  props: {
+    src: String
+  },
   data() {
     return {
       brands: [],
@@ -103,7 +106,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://138.201.184.34:5000/api/resource/cars/brands")
+      .get(this.src)
       .then(response => response.data)
       .then(data => {
         if (
