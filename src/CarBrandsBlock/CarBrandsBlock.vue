@@ -19,6 +19,19 @@
         <span>{{brands}}</span>
       </div>
 
+      <div class="CarBrandsBlock__price">
+
+        <VueSlider v-model="priceRange" :max="priceLimit" tooltip-dir="bottom" :bg-style="priceBgStyle" :process-style="priceProcessStyle">
+
+          <template slot="tooltip" scope="tooltip">
+
+            <div class="CarBrandsBlock__price-tooltip" v-html="formatPriceValue(tooltip.value)">
+            </div>
+
+          </template>
+        </VueSlider>
+      </div>
+
       <button class="CarBrandsBlock__button">Перейти в каталог</button>
     </div>
 
@@ -30,6 +43,7 @@
 
 <script>
 import axios from "axios";
+import VueSlider from "vue-slider-component";
 import Logos from "./Logos.vue";
 import OrangeOval from "./assets/OrangeOval.vue";
 import BlueOval from "./assets/BlueOval.vue";
@@ -39,12 +53,53 @@ export default {
   components: {
     Logos,
     OrangeOval,
-    BlueOval
+    BlueOval,
+    VueSlider
   },
   data() {
     return {
-      brands: []
+      brands: [],
+      priceRange: [1000000, 3000000],
+      priceLimit: 5000000,
+      priceCurrency: "₽",
+
+      priceBgStyle: {
+        background: "#2D3C4E55"
+      },
+
+      priceProcessStyle: {
+        background: "linear-gradient(270deg, #FB8522 9.73%, #FEC73C 100%)"
+      }
     };
+  },
+  methods: {
+    formatPriceValue(value) {
+      const whitespace = "&nbsp;";
+      const formatNumber = x =>
+        x
+          .toString()
+          .split("")
+          .reverse()
+          .join("")
+          .replace(/(.{3})/g, "$1 ")
+          .split("")
+          .reverse()
+          .join("")
+          .trimEnd()
+          .replace(/ /g, whitespace)
+          .concat(whitespace)
+          .concat(this.priceCurrency);
+
+      if (!isNaN(value)) {
+        return formatNumber(value);
+      }
+
+      if (Array.isArray(value) && value.length === 2) {
+        return value.map(formatNumber).join(`${whitespace}-${whitespace}`);
+      }
+
+      return "ОШИБКА";
+    }
   },
   mounted() {
     axios
@@ -138,6 +193,17 @@ export default {
 
 .CarBrandsBlock__brands-error {
   color: red;
+}
+
+.CarBrandsBlock__price {
+  width: 572px;
+  float: left;
+  margin: 15px 0 0;
+}
+
+.CarBrandsBlock__price-tooltip {
+  color: #2d3c4eda;
+  font-size: smaller;
 }
 
 .CarBrandsBlock__button {
