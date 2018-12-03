@@ -5,16 +5,6 @@
 </template>
 
 <style>
-@font-face {
-  font-family: Ubuntu Condensed;
-  src: url("./assets/Ubuntu-C.ttf");
-}
-
-@font-face {
-  font-family: Ubuntu;
-  src: url("./assets/Ubuntu-M.ttf");
-}
-
 html,
 body {
   margin: 0;

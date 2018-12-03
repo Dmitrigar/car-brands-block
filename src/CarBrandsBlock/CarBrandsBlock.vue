@@ -125,6 +125,16 @@ export default {
 <style lang="scss">
 @import "./vars.scss";
 
+@font-face {
+  font-family: Ubuntu Condensed;
+  src: url("./assets/Ubuntu-C.ttf");
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("./assets/Ubuntu-M.ttf");
+}
+
 .CarBrandsBlock {
   background: $mainBackground;
   font-family: Ubuntu;
